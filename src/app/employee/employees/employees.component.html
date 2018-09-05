@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+  <div class="col">
+  <section>
+  <header class="header">
+  <div class="row">
+  <div class="col-md-2">
+  <form name="empForm"> 
+  <table>
+   <tr>
+  <th colspan="2">Add Employee</th>
+  </tr>
+  <tr>
+  <td>FirstName:</td>
+  <td><input id="firstName" name="firstName" ></td>
+  </tr>
+  <tr>
+  <td>Last Name:</td>
+  <td><input id="lastName" name="lastName"></td>
+  </tr>
+  <tr>
+  <td colspan="2"> <button type="button" (click)="createEmployee()" class="blue-button">submit</button></td>
+  </tr>
+  </table>
+  </form>
+  </div>
+  </div>
+ </header>
+  </section>
+ <section class="main">
+ <table class="table">
+  <thead>
+  <tr>
+  <th>#</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">
+  <th scope="row">{{employee.empno}}</th>
+  <td>{{employee.firstName}}</td>
+  <td>{{employee.lastName}}</td>
+  <td>
+  <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+  </td>
+  </tr>
+ </tbody>
+  </table>
+  </section>
+  </div>
+  </div>
+ </div>
